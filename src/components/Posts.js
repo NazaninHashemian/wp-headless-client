@@ -13,7 +13,7 @@ function Posts() {
     <div>
       <h1>Flower Bucket Gallery</h1>
       {posts.map(post => (
-        <div key={post.id}>
+        <div key={post.id} className="post-wrapper">
           <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
           <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
         </div>
