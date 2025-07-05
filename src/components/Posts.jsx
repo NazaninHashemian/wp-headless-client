@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-function Posts() {
+function Posts({selectedCategory}) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('http://my-headless-site.local/wp-json/wp/v2/posts')
+    const categoryFilter = selectedCategory ? `&categories=${selectedCategory}` : ``;
+    fetch(`http://my-headless-site.local/wp-json/wp/v2/posts?${categoryFilter}`)
       .then(res => res.json())
       .then(data => setPosts(data));
-  }, []);
+  }, [selectedCategory]);
 
   return (
     <div>
