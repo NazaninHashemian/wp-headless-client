@@ -1,7 +1,7 @@
 {
   "name": "wp-headless-client",
   "version": "0.1.0",
-  "homepage": "https://NazaninHashemian.github.io/wp-headless-client",
+  "homepage": "https://nazaninhashemian.github.io/wp-headless-client",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
