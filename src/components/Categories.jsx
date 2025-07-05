@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Categories.css'; 
 
 function Categories() {
   const [categories, setCategories] = useState([]);
@@ -12,8 +13,8 @@ function Categories() {
 
   return (
     <div>
-      <h2>Categories</h2>
-      <ul>
+      {/* <h2>Categories</h2> */}
+      <ul className="categories-navbar">
         {categories.map(cat => (
           <li key={cat.id}>
             {cat.name} ({cat.count} posts)

@@ -1,0 +1,22 @@
+.categories-navbar {
+    display: flex;
+    background-color: #2c3e50; /* dark blue-gray background */
+    padding: 0.5rem 1rem;
+    list-style: none;
+    margin: 0;
+    overflow-x: auto; /* horizontal scroll if too many */
+  }
+  
+  .categories-navbar li {
+    margin-right: 1.5rem;
+    color: #ecf0f1; /* light text */
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .categories-navbar li:hover {
+    color: #1abc9c; /* teal on hover */
+  }
+  
