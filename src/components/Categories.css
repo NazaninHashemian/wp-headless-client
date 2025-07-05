@@ -20,3 +20,10 @@
     color: #1abc9c; /* teal on hover */
   }
   
+  .categories-navbar li.active {
+    color: #1abc9c;         /* highlight color */
+    /* font-weight: bold; */
+    /* optional underline effect */
+    /* border-bottom: 2px solid #1abc9c;  */
+  }
+  

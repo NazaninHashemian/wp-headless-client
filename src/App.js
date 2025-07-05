@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <div className="content-wrapper">
-        <Categories onSelectCategory={setSelectedCategory}/>
+        <Categories onSelectCategory={setSelectedCategory} selectedCategory={selectedCategory}/>
         <Posts selectedCategory={selectedCategory}/>
       </div>
     </div>

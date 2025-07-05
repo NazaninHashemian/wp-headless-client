@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Categories.css'; 
 
-function Categories({onSelectCategory}) {
+function Categories({onSelectCategory, selectedCategory}) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -15,12 +15,21 @@ function Categories({onSelectCategory}) {
     <div>
       {/* <h2>Categories</h2> */}
       <ul className="categories-navbar">
-        <li onClick={() => onSelectCategory(null)}>All</li>
+        <li 
+            className={selectedCategory === null ? 'active': ''}
+            onClick={() => onSelectCategory(null)}
+        >
+            All
+        </li>
         {categories.map(cat => (
-          <li key={cat.id} onClick={() => onSelectCategory(cat.id)}>
-            {cat.name} 
-            ({cat.count} items)
-          </li>
+            <li 
+                key={cat.id} 
+                className={selectedCategory === cat.id ? 'active': ''}
+                onClick={() => onSelectCategory(cat.id)}
+            >
+                {cat.name} 
+                ({cat.count} items)
+            </li>
         ))}
       </ul>
     </div>
