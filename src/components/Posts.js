@@ -11,7 +11,7 @@ function Posts() {
 
   return (
     <div>
-      <h1>WordPress Posts</h1>
+      <h1>Flower Bucket Gallery</h1>
       {posts.map(post => (
         <div key={post.id}>
           <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />

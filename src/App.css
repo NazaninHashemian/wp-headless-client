@@ -7,3 +7,36 @@
   margin-bottom: 1rem;
 }
 
+.App {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.App > div {
+  max-width: 800px;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f6f6; /* light grey background outside content */
+  font-family: sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  background-color: #ffffff;     /* white content box */
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional soft shadow */
+  border-radius: 8px;
+}
+
+
