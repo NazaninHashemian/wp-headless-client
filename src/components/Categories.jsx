@@ -5,7 +5,7 @@ function Categories({onSelectCategory, selectedCategory}) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('http://my-headless-site.local/wp-json/wp/v2/categories')
+    fetch('https://public-api.wordpress.com/wp/v2/sites/nazanin46.wordpress.com/categories')
       .then(res => res.json())
       .then(data => setCategories(data))
       .catch(err => console.error('Failed to fetch categories:', err));
