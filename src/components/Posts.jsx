@@ -5,7 +5,9 @@ function Posts({selectedCategory}) {
 
   useEffect(() => {
     const categoryFilter = selectedCategory ? `&categories=${selectedCategory}` : ``;
-    fetch(`http://my-headless-site.local/wp-json/wp/v2/posts?${categoryFilter}`)
+    const url = `https://public-api.wordpress.com/wp/v2/sites/nazanin46.wordpress.com/posts?per_page=20${categoryFilter}`;
+
+    fetch(url)
       .then(res => res.json())
       .then(data => setPosts(data));
   }, [selectedCategory]);
