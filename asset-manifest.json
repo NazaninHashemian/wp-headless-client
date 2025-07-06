@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wp-headless-client/static/css/main.bbdad9e8.css",
-    "main.js": "/wp-headless-client/static/js/main.c7b0225b.js",
+    "main.js": "/wp-headless-client/static/js/main.6f26ecc7.js",
     "static/js/453.9a1c35ef.chunk.js": "/wp-headless-client/static/js/453.9a1c35ef.chunk.js",
     "index.html": "/wp-headless-client/index.html",
     "main.bbdad9e8.css.map": "/wp-headless-client/static/css/main.bbdad9e8.css.map",
-    "main.c7b0225b.js.map": "/wp-headless-client/static/js/main.c7b0225b.js.map",
+    "main.6f26ecc7.js.map": "/wp-headless-client/static/js/main.6f26ecc7.js.map",
     "453.9a1c35ef.chunk.js.map": "/wp-headless-client/static/js/453.9a1c35ef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bbdad9e8.css",
-    "static/js/main.c7b0225b.js"
+    "static/js/main.6f26ecc7.js"
   ]
 }
