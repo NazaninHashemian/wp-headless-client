@@ -20,7 +20,9 @@ function Categories({ onSelectCategory, selectedCategory }) {
     <div>
       <select value={selectedCategory ?? "null"} onChange={handleChange} className="categories-select">
         <option value="null">All</option>
-        {categories.map(cat => (
+        {categories
+        .filter(cat => cat.count > 0)     // <-- exclude zero-count categories here
+        .map(cat => (
           <option key={cat.id} value={cat.id}>
             {cat.name} ({cat.count})
           </option>
