@@ -14,7 +14,7 @@ function Posts({selectedCategory}) {
 
   return (
     <div>
-      <h1>Flower Bucket Gallery</h1>
+      {/* <h1>Flower Bucket Gallery</h1> */}
       {posts.map(post => (
         <div key={post.id} className="post-wrapper">
           <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />

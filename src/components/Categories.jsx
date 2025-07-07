@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Categories.css'; 
 
-function Categories({onSelectCategory, selectedCategory}) {
+function Categories({ onSelectCategory, selectedCategory }) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -11,27 +11,21 @@ function Categories({onSelectCategory, selectedCategory}) {
       .catch(err => console.error('Failed to fetch categories:', err));
   }, []);
 
+  const handleChange = (e) => {
+    const value = e.target.value === "null" ? null : Number(e.target.value);
+    onSelectCategory(value);
+  };
+
   return (
     <div>
-      {/* <h2>Categories</h2> */}
-      <ul className="categories-navbar">
-        <li 
-            className={selectedCategory === null ? 'active': ''}
-            onClick={() => onSelectCategory(null)}
-        >
-            All
-        </li>
+      <select value={selectedCategory ?? "null"} onChange={handleChange} className="categories-select">
+        <option value="null">All</option>
         {categories.map(cat => (
-            <li 
-                key={cat.id} 
-                className={selectedCategory === cat.id ? 'active': ''}
-                onClick={() => onSelectCategory(cat.id)}
-            >
-                {cat.name} 
-                <span>({cat.count})</span>
-            </li>
+          <option key={cat.id} value={cat.id}>
+            {cat.name} ({cat.count})
+          </option>
         ))}
-      </ul>
+      </select>
     </div>
   );
 }

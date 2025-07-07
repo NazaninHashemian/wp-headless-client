@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <div className="content-wrapper">
+        <h1>Flower Bucket Gallery</h1>
         <Categories onSelectCategory={setSelectedCategory} selectedCategory={selectedCategory}/>
         <Posts selectedCategory={selectedCategory}/>
       </div>
