@@ -28,7 +28,7 @@ function Categories({onSelectCategory, selectedCategory}) {
                 onClick={() => onSelectCategory(cat.id)}
             >
                 {cat.name} 
-                ({cat.count} items)
+                <span>({cat.count})</span>
             </li>
         ))}
       </ul>

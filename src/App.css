@@ -5,7 +5,6 @@
   object-fit: cover !important;
   display: block;
   margin-bottom: 1rem;
-
   border-radius: 12px;
   border: 2px solid #ccc;
 }
@@ -34,7 +33,7 @@ body {
 }
 
 .content-wrapper {
-  background-color: #ffffff;     /* white content box */
+  background-color: #fff;     /* white content box */
   padding: 2rem;
   max-width: 800px;
   width: 100%;
@@ -48,6 +47,19 @@ body {
   border-bottom: 1px solid #f1f1f1; /* optional: adds subtle divider */
 }
 
+@media (max-width: 768px) {
+  body {
+    background-color: white; /* ✅ remove gray background on mobile */
+  }
+
+  .content-wrapper {
+    background-color: transparent; /* remove white card */
+    padding: 0;                 /* less padding on small screens */
+    box-shadow: none;              /* remove shadow */
+    border-radius: 0;              /* remove rounded corners */
+  }
+
+}
 
 
 
