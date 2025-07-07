@@ -17,7 +17,8 @@ function Categories({ onSelectCategory, selectedCategory }) {
   };
 
   return (
-    <div>
+    <div className="categories-container">
+      <h1 className="categories-heading">Flower Bucket Gallery</h1>
       <label htmlFor="category-select" style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>
         Categories:
       </label>
