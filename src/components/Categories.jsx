@@ -18,7 +18,15 @@ function Categories({ onSelectCategory, selectedCategory }) {
 
   return (
     <div>
-      <select value={selectedCategory ?? "null"} onChange={handleChange} className="categories-select">
+      <label htmlFor="category-select" style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>
+        Categories:
+      </label>
+      <select 
+        id="category-select"
+        value={selectedCategory ?? "null"} 
+        onChange={handleChange} 
+        className="categories-select"
+      >
         <option value="null">All</option>
         {categories
         .filter(cat => cat.count > 0)     // <-- exclude zero-count categories here
